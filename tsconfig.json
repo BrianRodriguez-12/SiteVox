@@ -12,5 +12,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
+  "module": "es6",
+  "outDir": "./dist",
+  "rootDir": "./src",
   "include": ["src"]
 }
