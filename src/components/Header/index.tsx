@@ -13,7 +13,6 @@ const Header: React.FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <header className="header">
       <div className="logoContainer">
