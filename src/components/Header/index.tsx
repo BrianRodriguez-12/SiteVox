@@ -3,15 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 // Styles
 import './styles.css';
+import LanguageToggle from '../LanguageSwitcher';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,12 +32,10 @@ const Header: React.FC = () => {
         <a href="#services" className="navLink">
           {t('services')}
         </a>
-        <a href="#contact" className="navLink">
-          {t('contactUs')}
-        </a>
       </nav>
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('es')}>Español</button>
+      <div className="languageContainer">
+        <LanguageToggle />
+      </div>
     </header>
   );
 };

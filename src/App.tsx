@@ -1,7 +1,10 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import './App.css';
-import Footer from './components/footer';
+
+// Components
+import Footer from './components/Footer';
 import Header from './components/Header';
+
+// Pages
 import Home from './pages/home';
 
 function App() {
@@ -9,9 +12,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <main style={styles.main}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </main>
       <Footer />
     </BrowserRouter>
