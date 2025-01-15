@@ -1,7 +1,7 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 // Components
-import Footer from './components/Footer';
+import Footer from './components/CustomFooter';
 import Header from './components/Header';
 
 // Pages
