@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import TravelToJapan from "./Japan";
 import TravelToUS from "./UnitedStates";
 
-const Services: React.FC = () => {
+const OurServices: React.FC = () => {
 
   const { t } = useTranslation();
   return (
@@ -15,10 +15,10 @@ const Services: React.FC = () => {
       <p>{t('servicesDescription')}</p>
       <ul>
         <li>
-          <Link to="travel-to-japan">{t('travelToJapan')}</Link>
+          <Link to="/services/travel-to-japan">Viajes a Japón</Link>
         </li>
         <li>
-          <Link to="travel-to-us">{t('travelToUS')}</Link>
+          <Link to="/services/travel-to-us">Viajes a Estados Unidos</Link>
         </li>
       </ul>
 
@@ -30,4 +30,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default OurServices;
