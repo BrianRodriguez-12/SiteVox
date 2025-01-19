@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         &#9776;
       </div>
       <nav className={`nav ${isOpen ? 'open' : ''}`}>
-        <a href="home" className="navLink">
+        <a href="" className="navLink">
           {t('home')}
         </a>
         <a href="about-us" className="navLink">
