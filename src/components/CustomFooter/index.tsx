@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footerContainer">
         <div className="footerSection">
           <h3 className="footerTitle">{t('quickLinks')}</h3>
           <ul className="footerList">
