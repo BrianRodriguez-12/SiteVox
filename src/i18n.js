@@ -58,6 +58,9 @@ const resources = {
       send: 'Send',
       messageSent: 'Message sent successfully',
       messageError: 'There was a problem sending your message.',
+      tijuana: 'Tijuana',
+      cbxBorderCrossing: 'CBX Border Crossing',
+      santaFeTrail: 'Santa Fe Trail',
     },
   },
   es: {
@@ -117,6 +120,9 @@ const resources = {
       send: 'Enviar',
       messageSent: 'Mensaje enviado correctamente',
       messageError: 'Hubo un problema al enviar tu mensaje.',
+      tijuana: 'Tijuana',
+      cbxBorderCrossing: 'Cruce Fronterizo CBX',
+      santaFeTrail: 'Camino de Santa Fe',
     },
   },
 };

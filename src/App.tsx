@@ -10,12 +10,14 @@ import Home from './pages/home';
 import AboutUs from './pages/AboutUs';
 import OurServices from './pages/OurServices';
 import ContactForm from './pages/ContactForm';
+// Styles
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main style={styles.main}>
+      <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -35,9 +37,3 @@ function App() {
 }
 
 export default App;
-
-const styles = {
-  main: {
-    padding: '20px',
-  },
-};

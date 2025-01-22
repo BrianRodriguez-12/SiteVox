@@ -1,0 +1,11 @@
+.main {
+    padding: 20px;
+    height: 75vh;
+  }
+  
+  @media (max-width: 600px) {
+    .main {
+      padding: 10px;
+      height: auto; /* Ajusta la altura automáticamente */
+    }
+  }
