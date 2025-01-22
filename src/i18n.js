@@ -51,8 +51,13 @@ const resources = {
       ourVision: 'Our Vision',
       visionDescription:
         'To be the go-to platform for travelers seeking support from planning to return, creating a united and well-informed community.',
-      message: 'Page not found',
-      home: 'Go to Home',
+      contactFormTitle: 'Contact Us',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send',
+      messageSent: 'Message sent successfully',
+      messageError: 'There was a problem sending your message.',
     },
   },
   es: {
@@ -105,8 +110,13 @@ const resources = {
       ourVision: 'Nuestra Visión',
       visionDescription:
         'Ser la plataforma de referencia para viajeros que buscan apoyo desde la planificación hasta el regreso, creando una comunidad unida y bien informada.',
-      message: 'Página no encontrada',
-      home: 'Ir a Inicio',
+      contactFormTitle: 'Contáctanos',
+      name: 'Nombre',
+      email: 'Correo Electrónico',
+      message: 'Mensaje',
+      send: 'Enviar',
+      messageSent: 'Mensaje enviado correctamente',
+      messageError: 'Hubo un problema al enviar tu mensaje.',
     },
   },
 };

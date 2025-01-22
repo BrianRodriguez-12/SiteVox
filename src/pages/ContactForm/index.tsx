@@ -1,0 +1,75 @@
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+// Services
+import { sendContactData } from '../../services/api';
+
+// Styles
+import './styles.css';
+
+const ContactForm = () => {
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await sendContactData(formData);
+      alert(t('messageSent'));
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      alert(`${t('messageError')}, ${error}`);
+    }
+  };
+
+  return (
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h2>{t('contactFormTitle')}</h2>
+        <label>
+          {t('name')}:
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          {t('email')}:
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          {t('message')}:
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <button type="submit">{t('send')}</button>
+      </form>
+    </div>
+  );
+};
+
+export default ContactForm;

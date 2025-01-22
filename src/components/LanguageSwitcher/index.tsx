@@ -13,7 +13,7 @@ const LanguageToggle: React.FC = () => {
 
   const toggleLanguage = () => {
     setIsEnglish(!isEnglish);
-    changeLanguage(isEnglish ? 'es' : 'en');
+    changeLanguage(isEnglish ? 'en' : 'es');
   };
 
   return (
