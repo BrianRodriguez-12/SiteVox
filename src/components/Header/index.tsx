@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="logoContainer">
-        <h1 className="logo">VoxMex</h1>
+        <h1>VoxMex</h1>
       </div>
       <div className="menuIcon" onClick={toggleMenu}>
         &#9776;

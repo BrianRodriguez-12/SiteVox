@@ -36,8 +36,8 @@ const ContactForm = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <h2>{t('contactFormTitle')}</h2>
-        <label>
+        <h1>{t('contactFormTitle')}</h1>
+        <h4>
           {t('name')}:
           <input
             type="text"
@@ -46,8 +46,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
+        </h4>
+        <h4>
           {t('email')}:
           <input
             type="email"
@@ -56,8 +56,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
+        </h4>
+        <h4>
           {t('message')}:
           <textarea
             name="message"
@@ -65,7 +65,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-        </label>
+        </h4>
         <button type="submit">{t('send')}</button>
       </form>
     </div>

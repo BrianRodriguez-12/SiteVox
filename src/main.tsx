@@ -7,8 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import App from './App';
 
 // Styles
-import './index.css';
-
+import './global.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
