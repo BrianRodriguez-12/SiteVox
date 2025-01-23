@@ -6,7 +6,7 @@ export default defineConfig({
   base: '',
   server: {
     proxy: {
-      '/api': 'https://mi-backend.onrender.com', // URL del backend
+      '/api': 'https://servervox.onrender.com/api',
     },
   },
 });

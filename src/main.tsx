@@ -3,13 +3,18 @@ import { createRoot } from 'react-dom/client';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Translations
-import './shared/i18n';
+import i18n from './shared/i18n';
 
 // Components
 import App from './App';
 
 // Styles
 import './shared/global.css';
+
+const savedLanguage = localStorage.getItem('language');
+if (savedLanguage) {
+  i18n.changeLanguage(savedLanguage);
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
