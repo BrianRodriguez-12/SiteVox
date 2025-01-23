@@ -1,10 +1,3 @@
-.main {
-  padding: 24px;
-  height: 75vh;
-  padding: 24px;
-  min-height: 80vh;
-}
-
 @media (max-width: 600px) {
   .main {
     padding: 12px;
@@ -20,21 +13,13 @@
 }
 
 .sidebar {
-  background-color: #ffffff;
   padding: 0.5rem;
   text-align: center;
-  color: #ffffff;
-}
-
-.sidebar.left,
-.sidebar.right {
-  background-color: #ffffff;
 }
 
 .content {
-  background-color: #ffffff;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: var(--border);
 }
 
 @media (max-width: 768px) {
@@ -50,7 +35,7 @@
 
   .sidebar.left,
   .sidebar.right {
-    background-color: #ffffff;
+    padding: 0.5rem;
     font-size: 0.9rem;
   }
 

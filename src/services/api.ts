@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://servervox.onrender.com/api"; // URL del backend
+const API_URL = "https://servervox.onrender.com/api";
 
 export const sendContactData = async (data: { name: string; email: string; message: string }) => {
   try {

@@ -18,10 +18,10 @@ const LanguageToggle: React.FC = () => {
 
   return (
     <div className="language-toggle" onClick={toggleLanguage}>
-      <div className={`button ${isEnglish ? 'english' : 'spanish'}`}>
+      <button className={`button ${isEnglish ? 'english' : 'spanish'}`}>
         <i className="fa fa-language" />
         <span className="text">{isEnglish ? 'English' : 'Español'}</span>
-      </div>
+      </button>
     </div>
   );
 };

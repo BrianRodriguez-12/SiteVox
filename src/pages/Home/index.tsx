@@ -1,9 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-// Styles
-import './styles.css';
-
 const Home: React.FC = () => {
   const { t } = useTranslation();
 

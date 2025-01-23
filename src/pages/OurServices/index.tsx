@@ -14,10 +14,8 @@ const OurServices: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('japan');
   return (
     <div>
-      <div className="servicesContainer">
-        <h1>{t('servicesTitle')}</h1>
-        <p>{t('servicesDescription')}</p>
-      </div>
+      <h1>{t('servicesTitle')}</h1>
+      <p className="servicesDescription">{t('servicesDescription')}</p>
       <div className="tabs">
         <button
           className={selectedTab === 'japan' ? 'active' : ''}

@@ -1,27 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Styles
 import './styles.css';
+
+// Components
 import LanguageToggle from '../LanguageSwitcher';
+import logo from '../../assets/vox-mex.webp'; // Importar la imagen
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const { t } = useTranslation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   return (
-    <header className="header">
+    <header>
       <div className="logoContainer">
-        <h1>VoxMex</h1>
+        <a href="/" className="logoLink">
+          <img src={logo} alt="VoxMex Logo" className="logoImage" />
+          <h1 className="headerColor">VoxMex</h1>
+        </a>
       </div>
-      <div className="menuIcon" onClick={toggleMenu}>
-        &#9776;
-      </div>
-      <nav className={`nav ${isOpen ? 'open' : ''}`}>
+      <nav className="nav">
         <a href="" className="navLink">
           {t('home')}
         </a>
@@ -32,9 +30,7 @@ const Header: React.FC = () => {
           {t('services')}
         </a>
       </nav>
-      <div className="languageContainer">
-        <LanguageToggle />
-      </div>
+      <LanguageToggle />
     </header>
   );
 };

@@ -34,7 +34,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div>
       <form onSubmit={handleSubmit}>
         <h1>{t('contactFormTitle')}</h1>
         <h4>
@@ -66,7 +66,7 @@ const ContactForm = () => {
             required
           />
         </h4>
-        <button type="submit">{t('send')}</button>
+        <button className='form-button' type="submit">{t('send')}</button>
       </form>
     </div>
   );

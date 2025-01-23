@@ -1,35 +1,18 @@
-.servicesContainer {
-  display: flex;
-  flex-direction: column;
+.servicesDescription {
   margin-bottom: 24px;
-  justify-content: left;
 }
 
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 24px;
 }
 
 .tabs button {
   padding: 12px 24px;
-  border: none;
-  background: #ffffff;
-  color: #000000;
-  margin-right: 5px;
   cursor: pointer;
 }
 
-.tabs button.active {
-  background: #000000;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.tabs button:hover {
-  background: #b4b4b4;
-  color: #000000;
-}
 .icon {
   margin-right: 12px;
 }

@@ -1,16 +1,11 @@
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-}
-
 form {
-  background: #fff;
+  margin-top: 24px;
+  align-self: center;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--boxShadow);
   width: 90%;
+  background-color: var(--white);
   max-width: 800px;
 }
 
@@ -20,26 +15,15 @@ label {
   font-weight: bold;
 }
 
-input, textarea{
-  width: 90%;
+input,
+textarea {
+  width: 95%;
   padding: 12px;
-  margin:12px;
-  border: 1px solid #b4b4b4;
+  border: var(--border);
   border-radius: 8px;
 }
 
-
-button {
+.form-button {
+  display: block;
   width: 100%;
-  padding: 12px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #b4b4b4;
 }

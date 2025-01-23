@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="footer">
+    <footer>
       <div className="footerContainer">
         <div className="footerSection">
           <h3 className="footerTitle">{t('quickLinks')}</h3>
@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
           <h3 className="footerTitle">{t('followUs')}</h3>
           <div className="footerSocial">
             <a
+              className="footerLink"
               href="https://www.facebook.com/VoxMexOficial"
               aria-label="Facebook"
-              className="footerLink"
             >
               <i className="fab fa-facebook-f"></i>
             </a>

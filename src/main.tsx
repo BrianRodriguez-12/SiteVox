@@ -1,13 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './i18n';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Translations
+import './shared/i18n';
 
 // Components
 import App from './App';
 
 // Styles
-import './global.css';
+import './shared/global.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
