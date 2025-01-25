@@ -1,0 +1,9 @@
+.cookies-content {
+  max-width: 100%;
+  overflow-wrap: break-word; /* Rompe palabras largas */
+  white-space: pre-wrap; /* Mantiene los saltos de línea pero adapta el texto */
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 5px;
+  background-color: var(--white);
+}

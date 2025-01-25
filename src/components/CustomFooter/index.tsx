@@ -15,17 +15,17 @@ const Footer: React.FC = () => {
           <h3 className="footerTitle">{t('quickLinks')}</h3>
           <ul className="footerList">
             <li>
-              <a href="/" className="footerLink">
+              <a className="footerLink" href="/">
                 {t('home')}
               </a>
             </li>
             <li>
-              <a href="/contact" className="footerLink">
+              <a className="footerLink" href="/contact">
                 {t('contactUs')}
               </a>
             </li>
             <li>
-              <a href="/privacy" className="footerLink">
+              <a className="footerLink" href="/privacy">
                 {t('privacyPolicy')}
               </a>
             </li>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               href="https://www.facebook.com/VoxMexOficial"
               aria-label="Facebook"
             >
-              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f" />
             </a>
             {/* 
             <a

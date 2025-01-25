@@ -1,0 +1,11 @@
+.adsbygoogle {
+  display: block;
+  width: 100%;
+  height: 300px; /* Altura para anuncios verticales */
+}
+
+@media (max-width: 600px) {
+  .adsbygoogle {
+    height: 90px; /* Altura para anuncios horizontales */
+  }
+}

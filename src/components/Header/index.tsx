@@ -6,27 +6,29 @@ import './styles.css';
 
 // Components
 import LanguageToggle from '../LanguageSwitcher';
-import logo from '../../assets/vox-mex.webp'; // Importar la imagen
+
+// Assets
+import logo from '../../assets/vox-mex.webp';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <header>
+    <header className='header'>
       <div className="logoContainer">
         <a href="/" className="logoLink">
-          <img src={logo} alt="VoxMex Logo" className="logoImage" />
+          <img className="logoImage" src={logo} alt="VoxMex Logo" />
           <h1 className="headerColor">VoxMex</h1>
         </a>
       </div>
       <nav className="nav">
-        <a href="" className="navLink">
+        <a className="navLink" href="/">
           {t('home')}
         </a>
-        <a href="about-us" className="navLink">
+        <a className="navLink" href="about-us">
           {t('aboutUs')}
         </a>
-        <a href="services" className="navLink">
+        <a className="navLink" href="services">
           {t('services')}
         </a>
       </nav>

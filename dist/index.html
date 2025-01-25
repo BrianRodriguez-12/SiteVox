@@ -1,15 +1,70 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vox-mex.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vox Mex</title>
-    <base href="/" />
-    <script type="module" crossorigin src="./assets/index-C9pvmouB.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dga2l2Rn.css">
+    <title>VoxMex</title>
+    <script src="https://cdn.cookielaw.org/consent/6b626ec4-d27f-43a0-a01e-424123f6ed57/OtAutoBlock.js"></script>
+    <script src="https://cmp.osano.com/169y7FUapm6rcxAO/51699aad-f4c8-4268-993a-42cdce6baa23/osano.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-V9HKJTZTY6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-V9HKJTZTY6');
+    </script>
+    <script type="module" crossorigin src="./assets/index-CXXHSES3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BZixphvh.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Configuración de Osano Cookie Consent -->
+    <script type="text/javascript">
+      var osanoConfig = {
+        consentNotice: {
+          description:
+            'Usamos cookies para personalizar contenido, medir el tráfico con herramientas como Google Analytics y Microsoft Clarity, y mostrar anuncios relevantes.',
+          learnMore: 'Política de cookies',
+        },
+        preferencesCenter: {
+          title: 'Tus preferencias de cookies',
+          blocks: [
+            {
+              title: 'Cookies necesarias',
+              description:
+                'Estas cookies son esenciales para el funcionamiento del sitio.',
+              toggle: {
+                value: 'necessary',
+                enabled: true,
+                readonly: true,
+              },
+            },
+            {
+              title: 'Cookies de análisis y publicidad',
+              description:
+                'Usamos estas cookies para medir el tráfico y mostrar anuncios personalizados mediante herramientas como Google Analytics, Microsoft Clarity y Google AdSense.',
+              toggle: {
+                value: 'analytics',
+                enabled: false,
+                readonly: false,
+              },
+              cookies: ['_ga', '_gid', 'clarity'],
+            },
+          ],
+        },
+      };
+      // Integrar la configuración con Osano
+      window.osano = window.osano || {};
+      window.osano.config = osanoConfig;
+    </script>
   </body>
 </html>

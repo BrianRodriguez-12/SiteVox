@@ -127,3 +127,7 @@ a {
   color: var(--backgroundColor);
   text-decoration: none;
 }
+
+.link{
+  color: var(--primaryColor);
+}

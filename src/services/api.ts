@@ -11,3 +11,13 @@ export const sendContactData = async (data: { name: string; email: string; messa
     throw error;
   }
 };
+
+export const getConfiguration = async (data: { language: string;}) => {
+  try {
+    const response = await axios.get(`${API_URL}/getConfiguration?language=${data.language}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error al enviar los datos:", error);
+    throw error;
+  }
+};
