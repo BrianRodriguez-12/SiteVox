@@ -32,7 +32,39 @@
         }
       });
     </script>
-    <script type="module" crossorigin src="./assets/index-eq5Op2BM.js"></script>
+
+    <!-- Carga de Google Analytics (pendiente del consentimiento) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-V9HKJTZTY6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+
+      document.addEventListener('osano:ready', () => {
+        if (window.osano && osano.consent.analytics) {
+          gtag('js', new Date());
+          gtag('config', 'G-V9HKJTZTY6');
+        }
+      });
+    </script>
+
+    <!-- Script para cargar AdSense dinámicamente -->
+    <script>
+      document.addEventListener('osano:ready', () => {
+        if (window.osano && osano.consent.marketing) {
+          const script = document.createElement('script');
+          script.src =
+            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+          script.async = true;
+          document.head.appendChild(script);
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="./assets/index-CXXHSES3.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BZixphvh.css">
   </head>
   <body>
