@@ -21,6 +21,44 @@
       window.osano.config = osanoConfig;
     </script> -->
     <script>
+      var osanoConfig = {
+        consentNotice: {
+          description:
+            "Usamos cookies para personalizar contenido, medir el tráfico y mostrar anuncios relevantes.",
+          learnMore: "Política de cookies",
+        },
+        preferencesCenter: {
+          title: "Tus preferencias de cookies",
+          blocks: [
+            {
+              title: "Cookies necesarias",
+              description: "Estas cookies son esenciales para el funcionamiento del sitio.",
+              toggle: {
+                value: "necessary",
+                enabled: true,
+                readonly: true,
+              },
+            },
+            {
+              title: "Cookies de análisis y publicidad",
+              description: "Usamos estas cookies para medir el tráfico y mostrar anuncios personalizados.",
+              toggle: {
+                value: "analytics",
+                enabled: false,
+                readonly: false,
+              },
+              cookies: ["_ga", "_gid", "clarity"],
+            },
+          ],
+        },
+      };
+    
+      // Asignar la configuración al objeto `osano`
+      window.osano = window.osano || {};
+      window.osano.config = osanoConfig;
+    </script>
+    
+    <script>
       if (window.osano) {
         osano.addEventListener('consent:on', () => {
           if (osano.consent.analytics) {
