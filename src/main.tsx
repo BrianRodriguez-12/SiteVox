@@ -11,6 +11,9 @@ import App from './App';
 // Styles
 import './shared/global.css';
 
+// Utils
+import { initGoogleAnalytics } from './utils/analytics';
+
 const savedLanguage = localStorage.getItem('language');
 if (savedLanguage) {
   i18n.changeLanguage(savedLanguage);
@@ -21,3 +24,5 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>
 );
+
+initGoogleAnalytics();
