@@ -7,6 +7,8 @@ declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     adsbygoogle: any[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    osano: any;
   }
 }
 
@@ -23,11 +25,25 @@ const AdSense: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.error('Error al cargar AdSense:', err);
-    }
+    const loadAdsense = () => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (err) {
+        console.error('Error al cargar AdSense:', err);
+      }
+    };
+
+    const checkConsent = () => {
+      if (window.osano && window.osano.consent.marketing) {
+        loadAdsense();
+      }
+    };
+
+    document.addEventListener('osano:ready', checkConsent);
+
+    return () => {
+      document.removeEventListener('osano:ready', checkConsent);
+    };
   }, [isSmallScreen]);
 
   return (

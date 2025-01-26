@@ -44,27 +44,26 @@
         window.dataLayer.push(arguments);
       }
 
-      gtag('js', new Date());
-      gtag('config', 'G-V9HKJTZTY6');
+      document.addEventListener('osano:ready', () => {
+        if (window.osano && osano.consent.analytics) {
+          gtag('js', new Date());
+          gtag('config', 'G-V9HKJTZTY6');
+        }
+      });
     </script>
 
     <!-- Script para cargar AdSense dinámicamente -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-3822217487643957"
-      data-ad-slot="9655401305"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    >
-    </ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <!--     <script>
+      document.addEventListener('osano:ready', () => {
+        if (window.osano && osano.consent.marketing) {
+          const script = document.createElement('script');
+          script.src =
+            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+          script.async = true;
+          document.head.appendChild(script);
+        }
+      });
+    </script> -->
   </head>
   <body>
     <div id="root"></div>
