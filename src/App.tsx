@@ -17,8 +17,6 @@ import ContactForm from './pages/ContactForm';
 import CookiesPage from './pages/Cookies';
 
 function App() {
-  console.log(document.cookie);
-
   return (
     <BrowserRouter>
       <Header />
