@@ -34,22 +34,41 @@
     </script>
 
     <!-- Carga de Google Analytics (pendiente del consentimiento) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-V9HKJTZTY6"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
 
-      document.addEventListener('osano:ready', () => {
-        if (window.osano && osano.consent.analytics) {
+    <!-- Google Analytics Fallback -->
+    <script>
+      function loadGoogleAnalytics() {
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V9HKJTZTY6';
+        script.async = true;
+        document.head.appendChild(script);
+
+        script.onload = () => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
           gtag('js', new Date());
           gtag('config', 'G-V9HKJTZTY6');
+        };
+      }
+
+      // Intentar cargar Analytics después de verificar el estado de Osano
+      document.addEventListener('osano:ready', () => {
+        if (window.osano && osano.consent.analytics) {
+          loadGoogleAnalytics();
         }
       });
+
+      // Fallback para cargar Analytics si Osano no está disponible o bloqueado
+      setTimeout(() => {
+        if (!window.osano || typeof osano.consent === 'undefined') {
+          console.warn(
+            'Osano no disponible. Cargando Google Analytics directamente.'
+          );
+          loadGoogleAnalytics();
+        }
+      }, 3000); // 3 segundos de espera por Osano
     </script>
 
     <!-- Script para cargar AdSense dinámicamente -->
