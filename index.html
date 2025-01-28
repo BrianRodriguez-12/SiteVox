@@ -70,19 +70,11 @@
         }
       }, 3000); // 3 segundos de espera por Osano
     </script>
-
-    <!-- Script para cargar AdSense dinámicamente -->
-    <!--     <script>
-      document.addEventListener('osano:ready', () => {
-        if (window.osano && osano.consent.marketing) {
-          const script = document.createElement('script');
-          script.src =
-            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-          script.async = true;
-          document.head.appendChild(script);
-        }
-      });
-    </script> -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3822217487643957"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="root"></div>

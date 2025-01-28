@@ -25,17 +25,13 @@ const AdSense: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const loadAdsense = () => {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (err) {
-        console.error('Error al cargar AdSense:', err);
-      }
-    };
-
     const checkConsent = () => {
       if (window.osano && window.osano.consent.marketing) {
-        loadAdsense();
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (err) {
+          console.error('Error al cargar AdSense:', err);
+        }
       }
     };
 
