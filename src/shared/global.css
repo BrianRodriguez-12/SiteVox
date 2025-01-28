@@ -21,7 +21,7 @@
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -36,15 +36,15 @@ h3 {
   color: var(--primaryColor);
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 28px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 16px;
 }
 
 input,
@@ -52,11 +52,11 @@ textarea,
 p {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
-  margin: 0.5rem 0;
+  margin: 4px;
 }
 
 small {
-  font-size: 0.875rem;
+  font-size: 11px;
   color: var(--textColor);
 }
 
@@ -128,6 +128,13 @@ a {
   text-decoration: none;
 }
 
-.link{
+Section {
+  text-align: justify;
+  flex: 1;
+  min-width: 200px;
+  margin: 12px 0;
+}
+
+.link {
   color: var(--primaryColor);
 }

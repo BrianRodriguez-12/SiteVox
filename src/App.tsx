@@ -15,6 +15,9 @@ import AboutUs from './pages/AboutUs';
 import OurServices from './pages/OurServices';
 import ContactForm from './pages/ContactForm';
 import CookiesPage from './pages/Cookies';
+import Visas from './pages/Visas';
+import FAQ from './pages/FAQ';
+import TravelTips from './pages/TravelTips';
 
 function App() {
   return (
@@ -31,11 +34,9 @@ function App() {
             <Route path="/services/*" element={<OurServices />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/policy" element={<CookiesPage />} />
-            {/* 
-        <Route path="/visas" element={<Visas />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/travel-tips" element={<TravelTips />} />
-        */}
+            <Route path="/visas" element={<Visas />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/travel-tips" element={<TravelTips />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

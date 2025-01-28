@@ -9,18 +9,33 @@ const Home: React.FC = () => {
       <h1>{t('welcome')}</h1>
       <p>{t('introText')}</p>
       <div className="cardsContainer">
-        <div className="card">
-          <h2>{t('visas')}</h2>
-          <p>{t('visasText')}</p>
-        </div>
-        <div className="card">
-          <h2>{t('travelTips')}</h2>
-          <p>{t('travelTipsText')}</p>
-        </div>
-        <div className="card">
-          <h2>{t('faqs')}</h2>
-          <p>{t('faqsText')}</p>
-        </div>
+        <button
+          className="card"
+          onClick={() => (window.location.href = '/visas')}
+        >
+          <div className="cardContent">
+            <h2>{t('visas.title')}</h2>
+            <p>{t('visas.widgetText')}</p>
+          </div>
+        </button>
+        <button
+          className="card"
+          onClick={() => (window.location.href = '/travel-tips')}
+        >
+          <div className="cardContent">
+            <h2>{t('travelTips.title')}</h2>
+            <p>{t('travelTips.widgetText')}</p>
+          </div>
+        </button>
+        <button
+          className="card"
+          onClick={() => (window.location.href = '/faq')}
+        >
+          <div className="cardContent">
+            <h2>{t('faqs')}</h2>
+            <p>{t('faqsText')}</p>
+          </div>
+        </button>
       </div>
     </div>
   );

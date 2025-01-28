@@ -1,0 +1,16 @@
+Li {
+  list-style: none;
+  align-items: baseline;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.title {
+  text-align: center;
+  margin: 24px, auto;
+}
