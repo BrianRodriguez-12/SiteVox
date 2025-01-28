@@ -14,13 +14,11 @@ const Header: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <header className='header'>
-      <div className="logoContainer">
-        <a href="/" className="logoLink">
-          <img className="logoImage" src={logo} alt="VoxMex Logo" />
-          <h1 className="headerColor">VoxMex</h1>
-        </a>
-      </div>
+    <header>
+      <button onClick={() => (window.location.href = '/')} className="logo">
+        <img className="logoImage" src={logo} alt="VoxMex Logo" />
+        <h1 className="headerColor">VoxMex</h1>
+      </button>
       <nav className="nav">
         <a className="navLink" href="/">
           {t('home')}

@@ -32,7 +32,7 @@ const MapWithRoutes: React.FC = () => {
     <MapContainer
       center={tijuana as [number, number]}
       zoom={6}
-      className="leaflet-container"
+      className="leafletContainer"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

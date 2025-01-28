@@ -6,26 +6,23 @@ import { FaPlaneDeparture, FaGlobeAmericas } from 'react-icons/fa';
 import TravelToJapan from './Japan';
 import TravelToUS from './UnitedStates';
 
-// Styles
-import './styles.css';
-
 const OurServices: React.FC = () => {
   const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('japan');
   return (
     <div>
       <h1>{t('servicesTitle')}</h1>
-      <p className="servicesDescription">{t('servicesDescription')}</p>
+      <p>{t('servicesDescription')}</p>
       <div className="tabs">
         <button
-          className={selectedTab === 'japan' ? 'active' : ''}
+          className={`tabButton ${selectedTab === 'japan' ? 'active' : ''}`}
           onClick={() => setSelectedTab('japan')}
         >
           <FaPlaneDeparture className="icon" />
           {t('travelToJapan')}
         </button>
         <button
-          className={selectedTab === 'us' ? 'active' : ''}
+          className={`tabButton ${selectedTab === 'us' ? 'active' : ''}`}
           onClick={() => setSelectedTab('us')}
         >
           <FaGlobeAmericas className="icon" />

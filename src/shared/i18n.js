@@ -121,7 +121,7 @@ const resources = {
             'Avoid carrying metal objects to pass security quickly.',
         },
       },
-      ds160FAQ: {
+      FAQ: {
         title: 'DS-160 Form FAQs',
         q1: {
           question: 'What is the DS-160 form?',
@@ -360,7 +360,7 @@ const resources = {
             'Evita llevar objetos de metal para pasar rápido por seguridad.',
         },
       },
-      ds160FAQ: {
+      FAQ: {
         title: 'Preguntas Frecuentes sobre el Formulario DS-160',
         q1: {
           question: '¿Qué es el formulario DS-160?',

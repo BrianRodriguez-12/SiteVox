@@ -12,19 +12,6 @@
   --border: 2px solid var(--primaryColor);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 11px;
-  font-weight: 600;
-}
-
 body {
   color: var(--textColor);
   font-family: 'Montserrat', Arial, sans-serif;
@@ -52,7 +39,6 @@ textarea,
 p {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
-  margin: 4px;
 }
 
 small {
@@ -60,11 +46,69 @@ small {
   color: var(--textColor);
 }
 
+body {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+  align-items: center;
+}
+
+footer {
+  flex-wrap: wrap;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--primaryColor);
+}
+
+button {
+  display: flex;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  border: var(--border);
+  color: var(--backgroundColor);
+  background-color: var(--primaryColor);
+}
+
+a {
+  color: var(--backgroundColor);
+  text-decoration: none;
+  text-align: center;
+  padding: 4px;
+}
+
+Section {
+  flex: 1;
+  text-align: justify;
+  min-width: 200px;
+  padding: 16px;
+}
+
+Li {
+  list-style: none;
+}
+
+.link {
+  color: var(--primaryColor);
+}
+
 .cardsContainer {
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin-top: 24px;
+  padding-top: 24px;
   flex-wrap: wrap;
 }
 
@@ -75,10 +119,55 @@ small {
   border-radius: 8px;
   width: 300px;
   box-shadow: var(--boxShadow);
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
-@media (max-width: 750px) {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 1px;
+  border: var(--border);
+  border-radius: 5px;
+  background-color: var(--white);
+  padding: 0px 16px 16px 16px;
+}
+
+.icon {
+  padding-right: 4px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.tabButton {
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  border: var(--border);
+}
+
+.tabButton.active {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+@media (max-width: 650px) {
   .cardsContainer {
     flex-direction: column;
     align-items: center;
@@ -88,53 +177,8 @@ small {
     width: 100%;
     max-width: 250px;
   }
-}
 
-body {
-  background-color: var(--backgroundColor);
-  color: var(--textColor);
-  font-family: 'Montserrat', Arial, sans-serif;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header,
-footer {
-  padding: 12px 24px;
-  background-color: var(--primaryColor);
-}
-
-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 12px;
-  position: relative;
-  background-color: var(--primaryColor);
-  border: var(--border);
-  color: var(--backgroundColor);
-}
-
-a {
-  color: var(--backgroundColor);
-  text-decoration: none;
-}
-
-Section {
-  text-align: justify;
-  flex: 1;
-  min-width: 200px;
-  margin: 12px 0;
-}
-
-.link {
-  color: var(--primaryColor);
+  button {
+    font-weight: lighter;
+  }
 }

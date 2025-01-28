@@ -7,9 +7,6 @@ import SnowTips from './Snow';
 import GeneralTips from './General';
 import TropicalTips from './Tropical';
 
-// Styles
-import './styles.css';
-
 const TravelTips: React.FC = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('general');
@@ -42,7 +39,11 @@ const TravelTips: React.FC = () => {
       <div className="content">
         <div className="tabs">
           {tabs.map((tab) => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)}>
+            <button
+              className={`tabButton ${activeTab === tab.id ? 'active' : ''}`}
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+            >
               {tab.label}
             </button>
           ))}

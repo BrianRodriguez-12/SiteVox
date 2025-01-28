@@ -1,5 +1,4 @@
 import React from 'react';
-// language
 import { useTranslation } from 'react-i18next';
 
 // Styles
@@ -10,47 +9,44 @@ const Footer: React.FC = () => {
 
   return (
     <footer>
-      <div className="footerContainer">
-        <div className="footerSection">
-          <h3 className="footerTitle">{t('quickLinks')}</h3>
-          <ul className="footerList">
-            <li>
-              <a className="footerLink" href="/">
-                {t('home')}
-              </a>
-            </li>
-            <li>
-              <a className="footerLink" href="/contact">
-                {t('contactUs')}
-              </a>
-            </li>
-            <li>
-              <a className="footerLink" href="/privacy">
-                {t('privacyPolicy')}
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="footerSection">
-          <h3 className="footerTitle">{t('contact')}</h3>
-          {/* 
+      <div className="footerSection">
+        <h3 className="footerTitle">{t('quickLinks')}</h3>
+        <li>
+          <a className="footerLink" href="/">
+            {t('home')}
+          </a>
+        </li>
+        <li>
+          <a className="footerLink" href="/contact">
+            {t('contactUs')}
+          </a>
+        </li>
+        <li>
+          <a className="footerLink" href="/privacy">
+            {t('privacyPolicy')}
+          </a>
+        </li>
+      </div>
+      <div className="footerSection">
+        <h3 className="footerTitle">{t('contact')}</h3>
+        {/* 
           <p className="footerText">
             {t('email')}:{' '}
             <a href="mailto:info@tu-sitio.com" className="footerLink"></a>
           </p> */}
-          <p className="footerText">{t('phone')}: +5656605207</p>
-        </div>
-        <div className="footerSection">
-          <h3 className="footerTitle">{t('followUs')}</h3>
-          <div className="footerSocial">
-            <a
-              className="footerLink"
-              href="https://www.facebook.com/VoxMexOficial"
-              aria-label="Facebook"
-            >
-              <i className="fab fa-facebook-f" />
-            </a>
-            {/* 
+        <p className="footerText">{t('phone')}: +5656605207</p>
+      </div>
+      <div className="footerSection">
+        <h3 className="footerTitle">{t('followUs')}</h3>
+        <div className="footerSocial">
+          <a
+            className="footerLink"
+            href="https://www.facebook.com/VoxMexOficial"
+            aria-label="Facebook"
+          >
+            <i className="fab fa-facebook-f" />
+          </a>
+          {/* 
             <a
               href="https://twitter.com"
               aria-label="Twitter"
@@ -65,7 +61,6 @@ const Footer: React.FC = () => {
             >
               <i className="fab fa-instagram"></i>
             </a> */}
-          </div>
         </div>
       </div>
     </footer>

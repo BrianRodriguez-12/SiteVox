@@ -11,8 +11,8 @@ import App from './App';
 // Styles
 import './shared/global.css';
 
-// Utils
-import { initGoogleAnalytics } from './utils/analytics';
+// Providers
+import { LanguageProvider } from './provider/Language';
 
 const savedLanguage = localStorage.getItem('language');
 if (savedLanguage) {
@@ -21,7 +21,9 @@ if (savedLanguage) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <LanguageProvider>
+      <App />
+    </LanguageProvider>
   </StrictMode>
 );
 /* 

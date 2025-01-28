@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main {
     padding: 12px;
     height: auto;
@@ -13,20 +13,11 @@
 }
 
 .sidebar {
-  padding: 0.5px;
+  padding: 16px;
   text-align: center;
 }
 
-.content {
-  width: 100%;
-  background-color: var(--white);
-  padding: 16px;
-  margin: 8px auto 8px auto;
-  border: var(--border);
-  justify-content: space-around;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 650px) {
   .layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
@@ -39,7 +30,7 @@
 
   .sidebar.left,
   .sidebar.right {
-    padding: 0.5px;
-    font-size: 0.9px;
+    padding: 4px;
+    font-size: 11px;
   }
 }

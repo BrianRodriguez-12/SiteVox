@@ -1,7 +1,3 @@
-.language-toggle {
-  margin: 24px 12px;
-}
-
 .button.english {
   background-color: var(--primaryColor);
   color: var(--backgroundColor);
@@ -13,22 +9,32 @@
   border: var(--border);
 }
 
-.button .fa {
+.button .headerIcon {
   transition: all 0.5s ease-in-out;
 }
 
-.button .text {
+.button Span {
   transition: all 0.5s ease-in-out;
 }
 
-.button.english .fa {
+.button.english .headerIcon {
   transform: translateX(0);
 }
 
-.button.english .text {
+.button.english Span {
   transform: translateX(0);
 }
 
-I {
-  margin-right: 8px;
+.headerIcon {
+  padding-right: 4px;
+}
+
+@media (max-width: 650px) {
+  .button Span {
+    display: none;
+  }
+
+  .headerIcon {
+    padding-right: 0;
+  }
 }

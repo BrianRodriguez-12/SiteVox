@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FaLanguage } from 'react-icons/fa';
+
 // Styles
 import './styles.css';
 
+// Context
+import { LanguageContext } from '../../context/LanguageContext';
+
 const LanguageToggle: React.FC = () => {
   const { i18n } = useTranslation();
-  const [isEnglish, setIsEnglish] = useState(i18n.language === 'en');
+  const { language, setLanguage } = useContext(LanguageContext);
+  const [isEnglish, setIsEnglish] = useState(language === 'en');
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language');
-
-    if (savedLanguage) {
-      i18n.changeLanguage(savedLanguage);
-      setIsEnglish(savedLanguage === 'en');
-    }
-  }, [i18n]);
+    setIsEnglish(language === 'en');
+  }, [language]);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
     localStorage.setItem('language', lng);
+    setLanguage(lng);
   };
 
   const toggleLanguage = () => {
@@ -28,10 +30,10 @@ const LanguageToggle: React.FC = () => {
   };
 
   return (
-    <div className="language-toggle" onClick={toggleLanguage}>
+    <div onClick={toggleLanguage}>
       <button className={`button ${isEnglish ? 'english' : 'spanish'}`}>
-        <i className="fa fa-language" />
-        <span className="text">{isEnglish ? 'Español' : 'English'}</span>
+        <FaLanguage className="headerIcon" />
+        <span>{isEnglish ? 'Español' : 'English'}</span>
       </button>
     </div>
   );

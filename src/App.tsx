@@ -10,14 +10,16 @@ import AdSense from './components/AdSense';
 import './App.css';
 
 // Pages
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import OurServices from './pages/OurServices';
-import ContactForm from './pages/ContactForm';
-import CookiesPage from './pages/Cookies';
-import Visas from './pages/Visas';
-import FAQ from './pages/FAQ';
-import TravelTips from './pages/TravelTips';
+import {
+  AboutUs,
+  CookiesPage,
+  ContactForm,
+  FAQ,
+  Home,
+  OurServices,
+  TravelTips,
+  Visas,
+} from './pages';
 
 function App() {
   return (

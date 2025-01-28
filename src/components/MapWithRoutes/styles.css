@@ -1,12 +1,12 @@
-.leaflet-container {
+.leafletContainer {
   height: 400px;
   width: 100%;
   border-radius: 8px;
-  margin-top: 24px;
+  padding-top: 24px;
 }
 
-@media (max-width: 600px) {
-  .leaflet-container {
+@media (max-width: 650px) {
+  .leafletContainer {
     height: 300px;
   }
 }

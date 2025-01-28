@@ -7,7 +7,7 @@ import { sendContactData } from '../../services/api';
 // Styles
 import './styles.css';
 
-const ContactForm = () => {
+const ContactForm: React.FC = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
@@ -66,7 +66,9 @@ const ContactForm = () => {
             required
           />
         </h4>
-        <button className='form-button' type="submit">{t('send')}</button>
+        <button className="formButton" type="submit">
+          {t('send')}
+        </button>
       </form>
     </div>
   );
