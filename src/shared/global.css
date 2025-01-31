@@ -160,6 +160,7 @@ Li {
   background-color: var(--backgroundColor);
   color: var(--primaryColor);
   border: var(--border);
+  font-weight: bold;
 }
 
 .tabButton.active {

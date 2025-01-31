@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           </a>
         </li>
         <li>
-          <a className="footerLink" href="/privacy">
+          <a className="footerLink" href="/policy">
             {t('privacyPolicy')}
           </a>
         </li>
