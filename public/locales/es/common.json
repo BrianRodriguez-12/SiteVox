@@ -1,0 +1,188 @@
+{
+  "quickLinks": "Enlaces rápidos",
+  "contact": "Contacto",
+  "privacyPolicy": "Política de Privacidad",
+  "followUs": "Síguenos",
+  "phone": "Teléfono",
+  "home": "Inicio",
+  "services": "Servicios",
+  "aboutUs": "Sobre Nosotros",
+  "contactUs": "Contáctanos",
+  "welcome": "Bienvenido a VoxMex 🌎",
+  "introText": "Tu guía confiable para viajar sin complicaciones. Explora consejos, guías, y herramientas útiles para tus aventuras desde México al mundo.",
+  "faqs": "FAQs",
+  "faqsText": "Respuestas a las preguntas más frecuentes sobre trámites y viajes.",
+  "servicesTitle": "Servicios",
+  "servicesDescription": "Explora nuestros servicios para planificar tu viaje:",
+  "travelToJapan": "Viajes a Japón",
+  "travelToUS": "Viajes a Estados Unidos",
+  "planTripToUS": "Planifica tu viaje a Estados Unidos",
+  "cbxDescription": "Desde México, el Cross Border Xpress (CBX) es una excelente opción para cruzar la frontera de forma rápida y segura. Te mostramos las mejores rutas y consejos.",
+  "idealDates": "Fechas ideales para viajar.",
+  "howToUseCBX": "Cómo usar el CBX.",
+  "transportOptions": "Opciones de transporte desde el aeropuerto.",
+  "planTripToJapan": "Planifica tu viaje a Japón",
+  "japanDescription": "Japón es un destino fascinante con una rica historia y cultura. Aquí te ayudamos a planificar tu viaje desde el aeropuerto de Narita hasta Tokio.",
+  "bestDates": "Las mejores fechas para viajar.",
+  "publicTransport": "Cómo usar el transporte público.",
+  "recommendedRoutes": "Rutas recomendadas para llegar a tu destino.",
+  "aboutUsTitle": "Acerca de Nosotros",
+  "aboutUsDescription": "En VoxMex, nos dedicamos a facilitar tus viajes y ayudarte a planificar tus actividades de manera eficiente. Creemos en el poder de la información clara y accesible para reducir el estrés de viajar y permitirte disfrutar cada momento.",
+  "ourMission": "Nuestra Misión",
+  "missionDescription": "Ayudar a los viajeros a cumplir sus sueños de explorar el mundo proporcionando herramientas y guías prácticas para simplificar el proceso.",
+  "ourVision": "Nuestra Visión",
+  "visionDescription": "Ser la plataforma de referencia para viajeros que buscan apoyo desde la planificación hasta el regreso, creando una comunidad unida y bien informada.",
+  "contactFormTitle": "Contáctanos",
+  "name": "Nombre",
+  "email": "Correo Electrónico",
+  "message": "Mensaje",
+  "messageNotFound": "Página no encontrada",
+  "send": "Enviar",
+  "messageSent": "Mensaje enviado correctamente",
+  "messageError": "Hubo un problema al enviar tu mensaje.",
+  "tijuana": "Tijuana",
+  "cbxBorderCrossing": "Cruce Fronterizo CBX",
+  "santaFeTrail": "Camino de Santa Fe",
+  "visas": {
+    "title": "Información sobre Visas",
+    "widgetText": "Encuentra toda la información necesaria para solicitar tu visa de forma exitosa.",
+    "requiredDocuments": {
+      "title": "Documentos Requeridos",
+      "passport": "Pasaporte",
+      "passportDetails": "Pasaporte válido con al menos seis meses de vigencia.",
+      "photo": "Foto",
+      "photoDetails": "Las fotos se tomarán el día de la cita.",
+      "applicationForm": "Formulario DS-160",
+      "applicationFormDetails": "Completa el formulario en línea en la página oficial.",
+      "paymentReceipt": "Comprobante de Pago",
+      "paymentReceiptDetails": "El comprobante de pago de la tarifa no es reembolsable.",
+      "supportingDocuments": "Documentos de Apoyo",
+      "supportingDocumentsDetails": "Documentos que demuestren lazos con tu país de origen, como cartas de empleo o propiedades."
+    },
+    "commonQuestions": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Qué debo llevar a mi cita para la visa?",
+        "answer": "Lleva tu pasaporte, confirmación del formulario DS-160, comprobante de pago y cualquier documento de apoyo."
+      },
+      "q2": {
+        "question": "¿Puedo llevar mi teléfono a la cita?",
+        "answer": "No se permiten dispositivos electrónicos dentro de la embajada o consulado."
+      },
+      "q3": {
+        "question": "¿Qué ocurre durante la cita?",
+        "answer": "Se tomarán tus fotos y huellas digitales, y se realizará una entrevista."
+      },
+      "q4": {
+        "question": "¿Es necesaria una identificación?",
+        "answer": "No siempre es obligatoria, pero se recomienda llevar una."
+      },
+      "q5": {
+        "question": "¿Puedo obtener un reembolso si mi visa es rechazada?",
+        "answer": "La tarifa de solicitud no es reembolsable, sin importar el resultado."
+      }
+    },
+    "tips": {
+      "title": "Consejos Útiles",
+      "arriveEarly": "Llega al menos 15 minutos antes de tu cita programada.",
+      "prepareAnswers": "Prepara respuestas concisas para preguntas sobre tu viaje.",
+      "avoidNervousness": "Mantén la calma y responde con honestidad durante la entrevista.",
+      "checkDocuments": "Verifica todos los documentos requeridos antes de tu cita.",
+      "electronicDevices": "No lleves dispositivos electrónicos ni bolsas grandes a la cita.",
+      "metalObjects": "Evita llevar objetos de metal para pasar rápido por seguridad."
+    }
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes sobre el Formulario DS-160",
+    "q1": {
+      "question": "¿Qué es el formulario DS-160?",
+      "answer": "El formulario DS-160, Solicitud de Visa de No Inmigrante en Línea, es para viajes temporales a los Estados Unidos y para visas K (prometido(a))."
+    },
+    "q2": {
+      "question": "¿Cómo completo el formulario DS-160?",
+      "answer": "Debe completar el formulario DS-160 en línea en el sitio web del Centro de Solicitud Electrónica Consular (CEAC)."
+    },
+    "q3": {
+      "question": "¿Qué documentos necesito para completar el formulario DS-160?",
+      "answer": "Necesitará su pasaporte, itinerario de viaje, fechas de sus últimas cinco visitas a los Estados Unidos y su currículum vitae."
+    },
+    "q4": {
+      "question": "¿Puedo guardar mi formulario DS-160 y completarlo más tarde?",
+      "answer": "Sí, puede guardar su solicitud y completarla más tarde. Asegúrese de anotar su ID de solicitud."
+    },
+    "q5": {
+      "question": "¿Qué debo hacer si cometo un error en mi formulario DS-160?",
+      "answer": "Si comete un error, deberá completar un nuevo formulario DS-160."
+    }
+  },
+  "travelTips": {
+    "title": "Consejos de viaje",
+    "widgetText": "Guías prácticas para aprovechar al máximo tu experiencia en el extranjero.",
+    "tabs": {
+      "general": "Generales",
+      "tropical": "Climas Tropicales",
+      "snow": "Climas frios",
+      "us": "Estados Unidos"
+    },
+    "general": {
+      "packing": "Empaque ligero",
+      "packingDetails": "Lleva solo lo necesario para evitar cargar peso extra.",
+      "meds": "Medicamentos",
+      "medsDetails": "Lleva tus medicamentos en su envase original.",
+      "insurance": "Seguro de viaje",
+      "insuranceDetails": "Contrata un seguro de viaje para cubrir emergencias médicas.",
+      "currency": "Cambio de moneda",
+      "currencyDetails": "Cambia dinero en casas de cambio para obtener una mejor tasa.",
+      "vaccines": "Vacunas",
+      "vaccinesDetails": "Consulta si necesitas vacunas especiales para tu destino.",
+      "emergency": "Contactos de emergencia",
+      "emergencyDetails": "Lleva una lista con números de emergencia y contactos."
+    },
+    "snow": {
+      "packing": "Empaque ligero",
+      "packingDetails": "Climas frios pueden requerir ropa más abrigada.",
+      "meds": "Medicamentos",
+      "medsDetails": "Los medicamentos deben estar protegidos del frío. y llevar suficiente para la duración del viaje.",
+      "insurance": "Seguro de viaje",
+      "insuranceDetails": "La cobertura de seguro de viaje debe incluir enfermedades relacionadas con el frio.",
+      "vaccines": "Vacunas",
+      "vaccinesDetails": "Vacunas contra la gripe y enfermedades comunes en climas frios.",
+      "emergency": "Contactos de emergencia",
+      "emergencyDetails": "Lleva una lista con números de emergencia y contactos y asegurate de tener un plan de emergencia en caso de tormentas de nieve."
+    },
+    "tropical": {
+      "packing": "Empaque ligero",
+      "packingDetails": "Climas tropicales pueden requerir menos ropa equipada para el calor.",
+      "meds": "Medicamentos",
+      "medsDetails": "Ten en cuenta la humedad y el calor al llevar tus medicamentos.",
+      "insurance": "Seguro de viaje",
+      "insuranceDetails": "La cobertura de seguro de viaje debe incluir enfermedades tropicales, así como protección contra insectos.",
+      "vaccines": "Vacunas",
+      "vaccinesDetails": "Vacunas contra enfermedades tropicales y fiebre amarilla.",
+      "emergency": "Contactos de emergencia",
+      "emergencyDetails": "Lleva una lista con números de emergencia y contactos y asegurate de tener un plan de emergencia en caso de enfermedades tropicales."
+    },
+    "us": {
+      "packing": "Empaque ligero",
+      "packingDetails": "Lleva solo lo necesario para evitar cargar peso extra.",
+      "meds": "Medicamentos",
+      "medsDetails": "Lleva tus medicamentos en su envase original.",
+      "insurance": "Seguro de viaje",
+      "insuranceDetails": "Contrata un seguro de viaje para cubrir emergencias médicas.",
+      "currency": "Cambio de moneda",
+      "currencyDetails": "Cambia dinero en casas de cambio para obtener una mejor tasa.",
+      "vaccines": "Vacunas",
+      "vaccinesDetails": "Consulta si necesitas vacunas especiales para tu destino.",
+      "emergency": "Contactos de emergencia",
+      "emergencyDetails": "Lleva una lista con números de emergencia y contactos.",
+      "transportation": "Transporte",
+      "transportationDetails": "Familiarízate con las opciones de transporte público y privado.",
+      "accommodation": "Alojamiento",
+      "accommodationDetails": "Reserva tu alojamiento con antelación para obtener mejores tarifas.",
+      "food": "Comida",
+      "foodDetails": "Prueba la comida local y sigue las recomendaciones de higiene.",
+      "safety": "Seguridad",
+      "safetyDetails": "Mantén tus pertenencias seguras y sigue las indicaciones de seguridad locales."
+    }
+  }
+}

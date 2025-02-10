@@ -10,10 +10,28 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "isolatedModules": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true,
+    "module": "esnext",
+    "resolveJsonModule": true
   },
   "module": "es6",
   "outDir": "./dist",
   "rootDir": "./src",
-  "include": ["src"]
+  "include": ["src", "components"],
+  "exclude": ["node_modules"],
+  "types": [
+    "cookie",
+    "estree",
+    "geojson",
+    "json-schema",
+    "leaflet",
+    "node",
+    "parse-json",
+    "prop-types",
+    "react",
+    "react-dom",
+    "react-transition-group",
+    "trusted-types"
+  ]
 }

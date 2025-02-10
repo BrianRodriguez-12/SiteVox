@@ -1,0 +1,32 @@
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+  padding: 16px auto;
+}
+
+.footerTitle {
+  color: var(--backgroundColor);
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLink {
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footerText {
+  color: var(--backgroundColor);
+}
+
+.footerSocial {
+  display: flex;
+  gap: 12px;
+}
+
+.footerLink:hover {
+  opacity: 0.75;
+}
