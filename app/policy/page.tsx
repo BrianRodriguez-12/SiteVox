@@ -9,9 +9,6 @@ import { getConfiguration } from '@/services/api';
 // Components
 import Loading from '@/components/Loading';
 
-// Styles
-import styles from './styles.module.css';
-
 export default function CookiesPage() {
   const [cookiesContent, setCookiesContent] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
@@ -40,7 +37,7 @@ export default function CookiesPage() {
           <Loading />
         ) : (
           <div
-            className={styles.cookiesText}
+            className="pt-16px"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(cookiesContent),
             }}

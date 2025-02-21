@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// Styles
-import styles from './styles.module.css';
-
 declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -45,7 +42,7 @@ export default function AdSense() {
 
   return (
     <ins
-      className={styles.adsByGoogle}
+      className="block flex-1 h-full w-full"
       data-ad-client="ca-pub-3822217487643957"
       data-ad-slot={isSmallScreen ? '9655401305' : '9132657126'}
       data-ad-format="auto"

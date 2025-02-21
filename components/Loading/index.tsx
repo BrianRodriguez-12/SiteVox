@@ -1,12 +1,9 @@
 import RotateRightIcon from '@mui/icons-material/RotateRight';
 
-// Styles
-import styles from './styles.module.css';
-
 export default function Loading() {
   return (
-    <div className={styles.loading}>
-      <RotateRightIcon className={styles.spinner} />
+    <div className="flex items-center justify-center">
+      <RotateRightIcon className="mr-2 animate-spin" />
       <p>Loading...</p>
     </div>
   );

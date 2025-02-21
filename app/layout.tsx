@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
 // Components
-import ClientLayout from '@/components/Layout';
+import ClientLayout from '@/components/ClientLayout';
 
 // Styles
 import '@/styles/globals.css';
@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.webp" type="image/webp" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
