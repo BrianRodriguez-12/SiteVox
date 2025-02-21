@@ -16,7 +16,7 @@ export default function Header() {
           className="flex items-center text-inherit no-underline p-0"
         >
           <Image
-            className="w-10 h-10 pr-2 rounded-full"
+            className="w-a h-a pr-2 rounded-full"
             width={40}
             height={40}
             src="/vox-mex.webp"
