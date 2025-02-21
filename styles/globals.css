@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primaryColor: #00796b; /* Azul brillante */
   --secondaryColor: #ffb74d; /* Amarillo cálido */
@@ -86,14 +90,15 @@ a {
   padding: 4px;
 }
 
-Section {
+section {
   flex: 1;
   text-align: justify;
   min-width: 200px;
   padding: 16px;
 }
 
-Li {
+li {
+  margin: 8px 0;
   list-style: none;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTranslation } from 'next-i18next';
 import {
   MapContainer,
   TileLayer,
@@ -7,18 +7,17 @@ import {
   Popup,
 } from 'react-leaflet';
 import L from 'leaflet';
-import { useTranslation } from 'react-i18next';
 
 // Styles
 import 'leaflet/dist/leaflet.css';
-import './styles.module.css';
+import styles from './styles.module.css';
 
 const customIcon = new L.Icon({
   iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Cambia por el ícono que desees
   iconSize: [32, 32],
 });
 
-const MapWithRoutes: React.FC = () => {
+export default function MapWithRoutes() {
   const { t } = useTranslation();
 
   const tijuana = [32.525, -117.037]; // Tijuana
@@ -32,7 +31,7 @@ const MapWithRoutes: React.FC = () => {
     <MapContainer
       center={tijuana as [number, number]}
       zoom={6}
-      className="leafletContainer"
+      className={styles.leafletContainer}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -54,6 +53,4 @@ const MapWithRoutes: React.FC = () => {
       />
     </MapContainer>
   );
-};
-
-export default MapWithRoutes;
+}

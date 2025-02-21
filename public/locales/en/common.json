@@ -12,7 +12,7 @@
   "introText": "Your reliable guide for hassle-free travel. Explore tips, guides, and useful tools for your adventures from Mexico to the world.",
   "faqs": "FAQs",
   "faqsText": "Answers to the most frequently asked questions about procedures and travel.",
-  "servicesTitle": "Services",
+  "travelPlansTitle": "Travel plans",
   "servicesDescription": "Explore our services to plan your trip:",
   "travelToJapan": "Travel to Japan",
   "travelToUS": "Travel to the United States",
@@ -34,7 +34,11 @@
   "visionDescription": "To be the go-to platform for travelers seeking support from planning to return, creating a united and well-informed community.",
   "contactFormTitle": "Contact Us",
   "name": "Name",
-  "email": "Email",
+  "email": {
+    "title": "Email",
+    "subject": "Interested in your information",
+    "body": "Hello, I visited your website and found the information interesting. I would like to know more details."
+  },
   "message": "Message",
   "messageNotFound": "Page not found",
   "send": "Send",

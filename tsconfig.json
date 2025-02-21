@@ -1,37 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "module": "esnext",
-    "resolveJsonModule": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "module": "es6",
-  "outDir": "./dist",
-  "rootDir": "./src",
-  "include": ["src", "components"],
-  "exclude": ["node_modules"],
-  "types": [
-    "cookie",
-    "estree",
-    "geojson",
-    "json-schema",
-    "leaflet",
-    "node",
-    "parse-json",
-    "prop-types",
-    "react",
-    "react-dom",
-    "react-transition-group",
-    "trusted-types"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next-i18next.config.js"],
+  "exclude": ["node_modules"]
 }

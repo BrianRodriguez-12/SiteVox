@@ -1,0 +1,22 @@
+.footerSection {
+  margin-bottom: 4px;
+}
+
+.footerTitle {
+  color: var(--backgroundColor);
+}
+
+.footerLink {
+  text-decoration: none;
+  color: var(--backgroundColor);
+  transition: opacity 0.3s;
+}
+
+.footerText {
+  color: var(--backgroundColor);
+  margin: 0px 0;
+}
+
+.footerLink:hover {
+  opacity: 0.75;
+}

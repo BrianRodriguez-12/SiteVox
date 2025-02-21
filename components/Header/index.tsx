@@ -1,45 +1,40 @@
-'use client'; // Asegura que este componente solo se ejecute en el cliente
-
-import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
-// Styles
-import './styles.module.css';
 // Components
 import LanguageToggle from '../LanguageSwitcher';
 
-const Header: React.FC = () => {
+// Styles
+import styles from './styles.module.css';
+
+export default function Header() {
   const { t } = useTranslation();
 
   return (
-    <header>
-      <Link href="/">
+    <header className="col-span-3 p-4">
+      <Link className={styles.logo} href="/">
         <Image
+          className={styles.logoImage}
           width={40}
           height={40}
-          src="/images/vox-mex.png"
+          src="/vox-mex.webp"
           alt="VoxMex Logo"
         />
-        <h1>VoxMex</h1>
+        <h1 className={styles.headerColor}>VoxMex</h1>
       </Link>
-
-      <nav>
-        <Link href="/">
+      <nav className={styles.nav}>
+        <Link className={styles.navLink} href="/">
           <span suppressHydrationWarning>{t('home')}</span>
         </Link>
-        <Link href="/about-us">
+        <Link className={styles.navLink} href="/about-us">
           <span suppressHydrationWarning>{t('aboutUs')}</span>
         </Link>
-        <Link href="/services">
-          <span suppressHydrationWarning>{t('services')}</span>
+        <Link className={styles.navLink} href="/travel-plans">
+          <span suppressHydrationWarning>{t('travelPlansTitle')}</span>
         </Link>
       </nav>
-
       <LanguageToggle />
     </header>
   );
-};
-
-export default Header;
+}

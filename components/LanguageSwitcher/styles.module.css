@@ -13,7 +13,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.button Span {
+.button span {
   transition: all 0.5s ease-in-out;
 }
 
@@ -21,7 +21,7 @@
   transform: translateX(0);
 }
 
-.button.english Span {
+.button.english span {
   transform: translateX(0);
 }
 
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 650px) {
-  .button Span {
+  .button span {
     display: none;
   }
 

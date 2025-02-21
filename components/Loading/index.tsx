@@ -1,15 +1,13 @@
-import React from 'react';
-import { FaSpinner } from 'react-icons/fa';
+import RotateRightIcon from '@mui/icons-material/RotateRight';
 
 // Styles
-import './styles.module.css';
+import styles from './styles.module.css';
 
-const Loading: React.FC = () => {
+export default function Loading() {
   return (
-    <div className="loading">
-      <FaSpinner className="spinner" />
+    <div className={styles.loading}>
+      <RotateRightIcon className={styles.spinner} />
       <p>Loading...</p>
     </div>
   );
-};
-export default Loading;
+}

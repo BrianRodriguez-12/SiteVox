@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Styles
-import './styles.module.css';
+import styles from './styles.module.css';
 
 declare global {
   interface Window {
@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-const AdSense: React.FC = () => {
+export default function AdSense() {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -45,13 +45,11 @@ const AdSense: React.FC = () => {
 
   return (
     <ins
-      className="adsbygoogle"
+      className={styles.adsByGoogle}
       data-ad-client="ca-pub-3822217487643957"
       data-ad-slot={isSmallScreen ? '9655401305' : '9132657126'}
       data-ad-format="auto"
       data-full-width-responsive="true"
-    ></ins>
+    />
   );
-};
-
-export default AdSense;
+}

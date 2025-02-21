@@ -1,23 +1,23 @@
-import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+import LanguageIcon from '@mui/icons-material/Language';
 
-const LanguageSwitcher = () => {
-  const router = useRouter();
-  const { locale, pathname, asPath } = router;
+// Styles
+import styles from './styles.module.css';
 
-  const changeLanguage = (lang: string) => {
-    router.push(pathname, asPath, { locale: lang });
+export default function LanguageSwitcher() {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
-    <div>
-      <button onClick={() => changeLanguage('es')} disabled={locale === 'es'}>
-        🇪🇸 Español
-      </button>
-      <button onClick={() => changeLanguage('en')} disabled={locale === 'en'}>
-        🇺🇸 English
-      </button>
-    </div>
+    <button
+      className={`${styles.button} ${i18n.language == 'en' ? styles.english : styles.spanish}`}
+      onClick={() => changeLanguage(i18n.language == 'en' ? 'es' : 'en')}
+    >
+      <LanguageIcon className={styles.headerIcon} />
+      <span>{i18n.language == 'en' ? 'Español' : 'English'}</span>
+    </button>
   );
-};
-
-export default LanguageSwitcher;
+}

@@ -12,7 +12,7 @@
   "introText": "Tu guía confiable para viajar sin complicaciones. Explora consejos, guías, y herramientas útiles para tus aventuras desde México al mundo.",
   "faqs": "FAQs",
   "faqsText": "Respuestas a las preguntas más frecuentes sobre trámites y viajes.",
-  "servicesTitle": "Servicios",
+  "travelPlansTitle": "Planes de viaje",
   "servicesDescription": "Explora nuestros servicios para planificar tu viaje:",
   "travelToJapan": "Viajes a Japón",
   "travelToUS": "Viajes a Estados Unidos",
@@ -34,7 +34,11 @@
   "visionDescription": "Ser la plataforma de referencia para viajeros que buscan apoyo desde la planificación hasta el regreso, creando una comunidad unida y bien informada.",
   "contactFormTitle": "Contáctanos",
   "name": "Nombre",
-  "email": "Correo Electrónico",
+  "email": {
+    "title": "Correo Electrónico",
+    "subject": "Interesado en su información",
+    "body": "Hola, vi su página y me interesó la información. Me gustaría saber más detalles."
+  },
   "message": "Mensaje",
   "messageNotFound": "Página no encontrada",
   "send": "Enviar",
