@@ -1,0 +1,40 @@
+.button.english {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+.button.spanish {
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  border: var(--border);
+}
+
+.button .headerIcon {
+  transition: all 0.5s ease-in-out;
+}
+
+.button span {
+  transition: all 0.5s ease-in-out;
+}
+
+.button.english .headerIcon {
+  transform: translateX(0);
+}
+
+.button.english span {
+  transform: translateX(0);
+}
+
+.headerIcon {
+  padding-right: 4px;
+}
+
+@media (max-width: 650px) {
+  .button span {
+    display: none;
+  }
+
+  .headerIcon {
+    padding-right: 0;
+  }
+}
