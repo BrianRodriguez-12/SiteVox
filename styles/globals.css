@@ -3,17 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --primaryColor: #00796b; /* Azul brillante */
+  --primaryColor: #00796b; /* Verde brillante */
   --secondaryColor: #ffb74d; /* Amarillo cálido */
-  --backgroundColor: #e1f5fe; /* Blanco puro */
-  --textColor: #263238; /* Gris oscuro para textos */
-  --detailColor: #4caf50; /* Gris claro para bordes y detalles */
-  --white: #fff;
+  --backgroundColor: #e1f5fe; /* Azul claro */
+  --textColor: #263238; /* Gris oscuro */
+  --secondaryTextColor: #263238; /* Gris oscuro */
+  --errorColor: #f44336;
+  --detailColor: #fff;
   --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --border: 2px solid var(--primaryColor);
 }
 
+/* Modo oscuro basado en la preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primaryColor: #80cbc4; /* Verde más claro */
+    --secondaryColor: #180e00; /* Naranja suave */
+    --backgroundColor: #263238; /* Gris oscuro */
+    --textColor: #e1f5fe; /* Azul claro */
+    --secondaryTextColor: #263238;
+    --errorColor: #ff4f42;
+    --detailColor: #37474f;
+    --boxShadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    --border: 2px solid var(--secondaryColor);
+  }
+}
+
+.dark {
+  --primaryColor: #80cbc4;
+  --secondaryColor: #180e00; /* Naranja suave */
+  --backgroundColor: #263238;
+  --textColor: #e1f5fe;
+  --secondaryTextColor: #263238;
+  --errorColor: #f44336;
+  --detailColor: #37474f;
+  --boxShadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  --border: 2px solid var(--secondaryColor);
+}
+
 body {
+  background-color: var(--backgroundColor);
   color: var(--textColor);
   font-family: 'Montserrat', Arial, sans-serif;
 }
@@ -40,6 +69,16 @@ textarea,
 p {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px 0;
+  border: var(--border);
+  border-radius: 8px;
+  color: var(--secondaryTextColor);
 }
 
 small {
@@ -115,7 +154,7 @@ li {
 }
 
 .card {
-  background-color: var(--white);
+  background-color: var(--detailColor);
   color: var(--primaryColor);
   padding: 24px;
   border-radius: 8px;
@@ -140,11 +179,11 @@ li {
 .content {
   max-width: 100%;
   overflow-wrap: break-word;
-  white-space: pre-wrap;
+  detailcolor-space: pre-wrap;
   padding: 1px;
   border: var(--border);
   border-radius: 5px;
-  background-color: var(--white);
+  background-color: var(--detailColor);
   padding: 0px 16px 16px 16px;
 }
 

@@ -5,6 +5,7 @@ const nextConfig = {
   output: 'standalone',
   i18n,
   experimental: {},
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;

@@ -24,8 +24,17 @@ export const sendContactData = async (data: {
   message: string;
 }) => {
   try {
-    const response = await API.post(`/contact`, data);
-    return response.data;
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Error al enviar el mensaje');
+    }
+
+    return await response.json();
   } catch (error) {
     console.error('Error al enviar los datos:', error);
     throw error;
