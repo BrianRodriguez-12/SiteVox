@@ -40,15 +40,15 @@ export const sendContactData = async (data: {
     throw error;
   }
 };
-
-export const getConfiguration = async (data: { language: string }) => {
+export async function getConfiguration(language: string) {
   try {
-    const response = await API.get(
-      `/getConfiguration?language=${data.language}`
-    );
-    return response.data;
+    const response = await fetch(`/api/configuration/${language}`);
+    if (!response.ok) throw new Error('Error obteniendo la configuración');
+
+    const data = await response.json();
+    return data.stringGenerated;
   } catch (error) {
-    console.error('Error al enviar los datos:', error);
-    throw error;
+    console.error('❌ Error:', error);
+    return null;
   }
-};
+}
