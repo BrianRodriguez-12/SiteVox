@@ -1,16 +1,15 @@
 import { NextResponse } from 'next/server';
-// Libs
+import { NextRequest } from 'next/server'; // Importa NextRequest
 import { connectToDatabase } from '@/lib/dbConnect';
-// Models
 import Configuration from '@/lib/models/Configuration';
 
-export async function GET(
-  req: Request,
-  context: { params: { language: string } }
-) {
+export async function GET(request: NextRequest) {
   await connectToDatabase();
 
-  const { language } = await context.params;
+  const url = new URL(request.url);
+  const language = url.pathname.split('/').pop(); // Esto debería extraer el idioma de la URL
+
+  console.log('🌍 Buscando configuración para idioma:', language);
 
   const config = await Configuration.findOne({ language });
 
