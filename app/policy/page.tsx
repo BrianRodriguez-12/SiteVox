@@ -25,7 +25,7 @@ export default function CookiesPage() {
     getConfiguration('es')
       .then((data) => {
         // Formatear el contenido para respetar los saltos de línea
-        const formattedContent = formatContent(data.stringGenerated);
+        const formattedContent = formatContent(data);
         setCookiesContent(formattedContent);
         setLoading(false);
       })
