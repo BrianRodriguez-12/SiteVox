@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+
+// DB
 import { connectToDatabase } from '@/lib/dbConnect';
+
+// Models
 import Configuration from '@/lib/models/Configuration';
 
 const formatContent = (content: string) => content.replace(/\n/g, '<br />');
@@ -8,9 +12,7 @@ export async function GET(request: NextRequest) {
   await connectToDatabase();
 
   const url = new URL(request.url);
-  const language = url.pathname.split('/').pop(); // Esto debería extraer el idioma de la URL
-
-  console.log('🌍 Buscando configuración para idioma:', language);
+  const language = url.pathname.split('/').pop();
 
   const config = await Configuration.findOne({ language });
 
@@ -21,8 +23,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // Formatear el contenido antes de enviarlo en la respuesta
-  const formattedContent = formatContent(config.content);
+  const formattedContent = formatContent(config.stringGenerated);
 
   return NextResponse.json(
     { ...config.toObject(), content: formattedContent },

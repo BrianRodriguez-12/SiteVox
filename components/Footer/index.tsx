@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
           <li>
             <Link
-              href="/contact-us"
+              href="/contact"
               className="text-backgroundColor no-underline transition-opacity duration-300 hover:opacity-75"
             >
               {t('contactUs')}

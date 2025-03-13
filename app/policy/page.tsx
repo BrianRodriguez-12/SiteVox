@@ -9,8 +9,6 @@ import { getConfiguration } from '@/services/api';
 // Components
 import Loading from '@/components/Loading';
 
-const formatContent = (content: string) => content.replace(/\n/g, '<br />');
-
 export default function CookiesPage() {
   const [cookiesContent, setCookiesContent] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
@@ -24,13 +22,12 @@ export default function CookiesPage() {
           throw new Error(`Error HTTP: ${response.status}`);
         }
 
-        const text = await response.text();
-        setCookiesContent(formatContent(text));
+        const data = await response.json();
+        setCookiesContent(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching cookies:', error);
-      })
-      .finally(() => {
         setLoading(false);
       });
   }, [i18n.language]);
@@ -43,7 +40,7 @@ export default function CookiesPage() {
           <Loading />
         ) : (
           <div
-            className="pt-4 cookie-content overflow-auto"
+            className="pt-4 cookie-content whitespace-pre-line overflow-auto"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(cookiesContent),
             }}

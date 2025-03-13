@@ -19,7 +19,7 @@ export const connectToDatabase = async () => {
     cached.promise = mongoose
       .connect(MONGO_URI, {
         dbName: MONGO_DB_NAME,
-        serverSelectionTimeoutMS: 5000, // Tiempo máximo para conectar (5s)
+        serverSelectionTimeoutMS: 5000,
       })
       .then((mongoose) => {
         return mongoose;

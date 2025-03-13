@@ -1,23 +1,4 @@
-import axios from 'axios';
 import { NextResponse } from 'next/server';
-
-const API_URL = 'https://servervox.onrender.com/api';
-
-const API = axios.create({
-  baseURL: API_URL,
-});
-
-API.interceptors.request.use(
-  (config) => {
-    config.headers['x-access-token'] =
-      'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.tyh-VfuzIxCyGYDlkBA7DfyjrqmSHu6pQ2hoZuFqUSLPNY2N0mpHb3nk5K17HWP_3cYHBw7AhHale5wky6-sVA';
-
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
 
 export async function sendContactData(data: {
   name: string;
@@ -25,7 +6,7 @@ export async function sendContactData(data: {
   message: string;
 }) {
   try {
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/contact/api', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -46,13 +27,12 @@ export async function getConfiguration(
   language: string
 ): Promise<NextResponse<unknown>> {
   try {
-    const response = await fetch(`/api/configuration/${language}`, {
-      next: { revalidate: 60 }, // Cache por 60 segundos
+    const response = await fetch(`/configuration/${language}`, {
+      next: { revalidate: 60 },
     });
     if (!response.ok) throw new Error('Error obteniendo la configuración');
 
     const data = await response.json();
-    console.log(' data:', data);
 
     return NextResponse.json(data.stringGenerated);
   } catch (error) {

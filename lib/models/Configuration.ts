@@ -10,7 +10,6 @@ const ConfigurationSchema = new Schema<IConfiguration>({
   stringGenerated: { type: String, required: true },
 });
 
-// Evita recrear el modelo en cada recarga del servidor
 const Configuration =
   models.Configuration ||
   model<IConfiguration>('Configuration', ConfigurationSchema);
