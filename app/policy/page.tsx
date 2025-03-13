@@ -1,6 +1,7 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import DOMPurify from 'dompurify';
 
 // Services
 import { getConfiguration } from '@/services/api';
@@ -8,42 +9,41 @@ import { getConfiguration } from '@/services/api';
 // Components
 import Loading from '@/components/Loading';
 
-import DOMPurify from 'dompurify';
-// Función para reemplazar los saltos de línea por <br />
-const formatContent = (content: string) => {
-  return content.replace(/\n/g, '<br />');
-};
+const formatContent = (content: string) => content.replace(/\n/g, '<br />');
 
 export default function CookiesPage() {
-  const [cookiesContent, setCookiesContent] = React.useState<string>('');
-  const [loading, setLoading] = React.useState<boolean>(true);
-
+  const [cookiesContent, setCookiesContent] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
   const { i18n } = useTranslation();
 
   useEffect(() => {
     setLoading(true);
-    getConfiguration('es')
-      .then((data) => {
-        // Formatear el contenido para respetar los saltos de línea
-        const formattedContent = formatContent(data);
-        setCookiesContent(formattedContent);
-        setLoading(false);
+    getConfiguration(i18n.language)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`Error HTTP: ${response.status}`);
+        }
+
+        const text = await response.text();
+        setCookiesContent(formatContent(text));
       })
       .catch((error) => {
         console.error('Error fetching cookies:', error);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, [i18n.language]);
 
   return (
-    <div className={'container'}>
-      <h1>Cookies</h1>
-      <div className={'content'}>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Cookies</h1>
+      <div className="content">
         {loading ? (
           <Loading />
         ) : (
           <div
-            className="pt-4 cookie-content whitespace-pre-line overflow-auto"
+            className="pt-4 cookie-content overflow-auto"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(cookiesContent),
             }}

@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server';
-import { NextRequest } from 'next/server'; // Importa NextRequest
+import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/dbConnect';
 import Configuration from '@/lib/models/Configuration';
+
+const formatContent = (content: string) => content.replace(/\n/g, '<br />');
 
 export async function GET(request: NextRequest) {
   await connectToDatabase();
@@ -20,5 +21,17 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  return NextResponse.json(config, { status: 200 });
+  // Formatear el contenido antes de enviarlo en la respuesta
+  const formattedContent = formatContent(config.content);
+
+  return NextResponse.json(
+    { ...config.toObject(), content: formattedContent },
+    {
+      status: 200,
+      headers: {
+        'Cache-Control':
+          'public, max-age=2592000, stale-while-revalidate=86400',
+      },
+    }
+  );
 }

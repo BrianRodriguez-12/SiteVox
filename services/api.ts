@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { NextResponse } from 'next/server';
 
 const API_URL = 'https://servervox.onrender.com/api';
 
@@ -18,11 +19,11 @@ API.interceptors.request.use(
   }
 );
 
-export const sendContactData = async (data: {
+export async function sendContactData(data: {
   name: string;
   email: string;
   message: string;
-}) => {
+}) {
   try {
     const response = await fetch('/api/contact', {
       method: 'POST',
@@ -39,16 +40,23 @@ export const sendContactData = async (data: {
     console.error('Error al enviar los datos:', error);
     throw error;
   }
-};
-export async function getConfiguration(language: string) {
+}
+
+export async function getConfiguration(
+  language: string
+): Promise<NextResponse<unknown>> {
   try {
-    const response = await fetch(`/api/configuration/${language}`);
+    const response = await fetch(`/api/configuration/${language}`, {
+      next: { revalidate: 60 }, // Cache por 60 segundos
+    });
     if (!response.ok) throw new Error('Error obteniendo la configuración');
 
     const data = await response.json();
-    return data.stringGenerated;
+    console.log(' data:', data);
+
+    return NextResponse.json(data.stringGenerated);
   } catch (error) {
     console.error('❌ Error:', error);
-    return null;
+    return NextResponse.json({ error: 'Error obteniendo la configuración' });
   }
 }

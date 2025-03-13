@@ -1,27 +1,37 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import mongoose from 'mongoose';
 
 const MONGO_URI = process.env.MONGODB_URI;
-const MONGO_DB_NAME = process.env.MONGODB_DB || 'SiteVoxDB';
+const MONGO_DB_NAME = process.env.MONGODB_DB || 'test';
 
 if (!MONGO_URI) {
   throw new Error('❌ MONGO_URI no está definida en .env.local');
 }
 
+const cached = (global as any).mongoose || { conn: null, promise: null };
+
 export const connectToDatabase = async () => {
-  if (mongoose.connection.readyState >= 1) {
-    console.log('⚡️ Ya conectado a MongoDB');
-    return;
+  if (cached.conn) {
+    return cached.conn;
   }
 
-  try {
-    await mongoose.connect(MONGO_URI, {
-      dbName: MONGO_DB_NAME,
-      serverSelectionTimeoutMS: 5000, // Tiempo máximo para conectar (5s)
-    });
-
-    console.log('✅ Conectado a MongoDB');
-  } catch (error) {
-    console.error('❌ Error al conectar a MongoDB:', error);
-    throw new Error('Error de conexión a la base de datos');
+  if (!cached.promise) {
+    cached.promise = mongoose
+      .connect(MONGO_URI, {
+        dbName: MONGO_DB_NAME,
+        serverSelectionTimeoutMS: 5000, // Tiempo máximo para conectar (5s)
+      })
+      .then((mongoose) => {
+        return mongoose;
+      })
+      .catch((err) => {
+        console.error('❌ Error al conectar a MongoDB:', err);
+        throw err;
+      });
   }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
 };
+
+(global as any).mongoose = cached;
