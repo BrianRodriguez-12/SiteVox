@@ -36,7 +36,7 @@ export default function Header() {
           <span suppressHydrationWarning>{t('aboutUs')}</span>
         </Link>
         <Link
-          href="/travel-plans"
+          href="/routes"
           className="no-underline font-bold text-backgroundColor"
         >
           <span suppressHydrationWarning>{t('travelPlansTitle')}</span>

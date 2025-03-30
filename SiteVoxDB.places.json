@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "67d4cc3c456a77f005b2d752"
+  },
+  "name": "San Diego Zoo",
+  "type": "atracción",
+  "description": "Uno de los zoológicos más grandes y famosos del mundo.",
+  "location": {
+    "lat": 32.7353,
+    "lng": -117.149
+  },
+  "hours": "09:00 AM - 06:00 PM",
+  "price": 65,
+  "nearby": [
+    {
+      "name": "Balboa Park",
+      "location": {
+        "lat": 32.7344,
+        "lng": -117.1446
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d4cc3c456a77f005b2d751"
+  },
+  "name": "Disneyland",
+  "type": "parque",
+  "description": "Parque temático icónico con atracciones y personajes de Disney.",
+  "location": {
+    "lat": 33.8121,
+    "lng": -117.919
+  },
+  "hours": "08:00 AM - 12:00 AM",
+  "price": 150,
+  "nearby": [
+    {
+      "name": "Disney California Adventure",
+      "location": {
+        "lat": 33.8063,
+        "lng": -117.9202
+      }
+    },
+    {
+      "name": "Downtown Disney",
+      "location": {
+        "lat": 33.8124,
+        "lng": -117.9236
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d4cc3c456a77f005b2d754"
+  },
+  "name": "Puesto Mexican Street Food",
+  "type": "restaurante",
+  "description": "Restaurante mexicano popular con tacos y margaritas.",
+  "location": {
+    "lat": 32.7092,
+    "lng": -117.1611
+  },
+  "hours": "11:00 AM - 10:00 PM",
+  "price": 20,
+  "nearby": [
+    {
+      "name": "Seaport Village",
+      "location": {
+        "lat": 32.7096,
+        "lng": -117.1703
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d4cc3c456a77f005b2d753"
+  },
+  "name": "La Jolla Cove",
+  "type": "atracción",
+  "description": "Hermosa playa con vistas espectaculares y vida marina.",
+  "location": {
+    "lat": 32.8502,
+    "lng": -117.272
+  },
+  "hours": "Abierto 24 horas",
+  "price": 0,
+  "nearby": [
+    {
+      "name": "Torrey Pines State Reserve",
+      "location": {
+        "lat": 32.9211,
+        "lng": -117.2524
+      }
+    }
+  ]
+}]
