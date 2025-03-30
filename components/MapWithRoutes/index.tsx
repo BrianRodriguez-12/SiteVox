@@ -5,14 +5,16 @@ import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 
 import L from 'leaflet';
+import { MapContainerProps } from 'react-leaflet';
 
 // Icons
 import RoomIcon from '@mui/icons-material/Room';
 
-const MapContainer = dynamic(
+const MapWithNoSSR = dynamic<MapContainerProps>(
   () => import('react-leaflet').then((mod) => mod.MapContainer),
   { ssr: false }
 );
+
 const TileLayer = dynamic(
   () => import('react-leaflet').then((mod) => mod.TileLayer),
   { ssr: false }
@@ -38,11 +40,11 @@ const createDivIcon = (component: JSX.Element): L.DivIcon => {
   });
 };
 
-export default function MapWithRoutes({
+const MapWithRoutes = ({
   locations,
 }: {
   locations: { name: string; coords: [number, number] }[];
-}) {
+}) => {
   const { t } = useTranslation();
   const [L, setL] = useState<typeof import('leaflet') | null>(null);
 
@@ -90,7 +92,7 @@ export default function MapWithRoutes({
   ];
 
   return (
-    <MapContainer
+    <MapWithNoSSR
       center={locations[0].coords as [number, number]}
       zoom={6}
       className="h-[400px] w-full rounded-lg pt-6 md:h-[300px]"
@@ -117,6 +119,8 @@ export default function MapWithRoutes({
           color={index === 0 ? 'blue' : 'green'}
         />
       ))}
-    </MapContainer>
+    </MapWithNoSSR>
   );
-}
+};
+
+export default MapWithRoutes;

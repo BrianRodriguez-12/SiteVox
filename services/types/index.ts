@@ -1,4 +1,4 @@
-import { Day, Place } from './places';
+import { Place } from './places';
 import { RouteData } from './routes';
 
-export type { Place, RouteData, Day };
+export type { Place, RouteData };

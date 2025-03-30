@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 // Icons
 import FlightIcon from '@mui/icons-material/Flight';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import dynamic from 'next/dynamic';
 
 // Services
 import { RouteData } from '@/services/types/routes';
@@ -13,7 +14,9 @@ import { getRouteData } from '@/services/api';
 
 // Components
 import Loading from '@/components/Loading';
-import MapWithRoutes from '@/components/MapWithRoutes';
+const MapWithRoutes = dynamic(() => import('@/components/MapWithRoutes'), {
+  ssr: false,
+});
 
 // Enums
 import { Country } from '@/utils/enums';
