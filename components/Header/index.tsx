@@ -36,10 +36,10 @@ export default function Header() {
           <span suppressHydrationWarning>{t('aboutUs')}</span>
         </Link>
         <Link
-          href="/routes"
+          href="/visa"
           className="no-underline font-bold text-backgroundColor"
         >
-          <span suppressHydrationWarning>{t('travelPlansTitle')}</span>
+          <span suppressHydrationWarning>{t('visasTitle')}</span>
         </Link>
       </nav>
       <div className="mt-2 md:mt-0">

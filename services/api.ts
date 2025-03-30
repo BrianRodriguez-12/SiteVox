@@ -42,7 +42,7 @@ export async function getRouteData(
 ): Promise<RouteData[]> {
   try {
     const data = await fetchData(
-      `/routes/api?countryCode=${countryCode}&language=${language}`,
+      `/availableRoute?countryCode=${countryCode}&language=${language}`,
       {
         next: { revalidate: 60 },
       }

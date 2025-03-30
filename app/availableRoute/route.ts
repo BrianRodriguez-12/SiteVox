@@ -1,8 +1,9 @@
 import { connectToDatabase } from '@/lib/dbConnect';
+import { t } from 'i18next';
 
 // Models
-import Routes from '@/lib/models/Routes';
 import Country from '@/lib/models/Countries';
+import Routes from '@/lib/models/Routes';
 import '@/lib/models/Places';
 
 export async function GET(request: Request) {
@@ -14,16 +15,22 @@ export async function GET(request: Request) {
   console.log(' GET ~ language:', language);
 
   if (!countryCode) {
-    return new Response(JSON.stringify({ message: 'Falta countryCode' }), {
-      status: 400,
-    });
+    return new Response(
+      JSON.stringify({ message: t('country') + t('messageNotFound') }),
+      {
+        status: 400,
+      }
+    );
   }
 
   const country = await Country.findOne({ code: countryCode });
   if (!country) {
-    return new Response(JSON.stringify({ message: 'País no encontrado' }), {
-      status: 404,
-    });
+    return new Response(
+      JSON.stringify({ message: t('country') + t('messageNotFound') }),
+      {
+        status: 404,
+      }
+    );
   }
 
   const routes = await Routes.find({ countryId: country._id })
@@ -31,10 +38,9 @@ export async function GET(request: Request) {
     .lean();
 
   if (!routes.length) {
-    return new Response(
-      JSON.stringify({ message: 'No se encontraron rutas' }),
-      { status: 404 }
-    );
+    return new Response(JSON.stringify({ message: t('routeNotFound') }), {
+      status: 404,
+    });
   }
 
   const localizedRoutes = routes.map((route) => ({

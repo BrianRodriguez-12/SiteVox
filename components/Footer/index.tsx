@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+
+// Icons
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 export default function Footer() {

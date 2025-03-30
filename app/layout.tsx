@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
@@ -6,7 +7,6 @@ import ClientLayout from '@/components/ClientLayout';
 
 // Styles
 import '@/styles/globals.css';
-import Script from 'next/script';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +32,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/icon.webp" type="image/webp" />
-        {/* Osano Consent Manager */}
         <Script
           id="osano"
           strategy="afterInteractive"
@@ -82,7 +81,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Google AdSense */}
         <Script
           id="adsense"
           strategy="afterInteractive"

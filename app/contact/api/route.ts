@@ -1,5 +1,9 @@
 import { NextResponse } from 'next/server';
+
+// DB
 import { connectToDatabase } from '@/lib/dbConnect';
+
+// Models
 import Contact from '@/lib/models/Contact';
 
 export async function POST(request: Request) {

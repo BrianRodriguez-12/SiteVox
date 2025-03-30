@@ -1,5 +1,5 @@
-import { JSX, useEffect, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { JSX, useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
@@ -57,7 +57,7 @@ export default function MapWithRoutes({
   }
 
   if (!Array.isArray(locations) || locations.length === 0) {
-    return <p>{t('travelToJapan')}</p>;
+    return <p>{t('mapUnableToLoad')}</p>;
   }
 
   const calculateDistance = (

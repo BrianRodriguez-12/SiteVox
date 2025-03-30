@@ -1,5 +1,6 @@
 // Types
 import { TFunction } from 'i18next';
+
 // Enums
 import { Country } from '@/utils/enums';
 
